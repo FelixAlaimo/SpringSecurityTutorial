@@ -7,8 +7,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomePageController {
 	
 	@RequestMapping("/")
-	public String showHomePage() {
-		return "<h1>Welcome to the home page!</h1>";
+	public String welcomeAny() {
+		return "<h1>Welcome!</h1>";
+	}
+	
+	@RequestMapping("/user")
+	public String welcomeUser() {
+		return "<h1>Welcome User!</h1>";
+	}
+	
+	@RequestMapping("/admin")
+	public String welcomeAdmin() {
+		return "<h1>Welcome Admin!</h1>";
 	}
 
 }
